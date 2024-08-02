@@ -1,0 +1,63 @@
+/* Style global pour la page */
+.pageContainer {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+/* Style pour la colonne des heures */
+.hoursColumn {
+  width: 80px;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 0.8rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100vh; /* Assure que la colonne couvre toute la hauteur de la page */
+  overflow-y: hidden; /* Empêche le défilement de la colonne des heures */
+}
+
+/* Style pour les heures affichées */
+.hourRow {
+  height: calc(100vh / 24); /* Hauteur pour chaque ligne de 30 minutes (24 demi-heures de 09h00 à 21h00) */
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style pour le calendrier */
+.calendar {
+  flex: 1;
+  position: relative;
+  height: 100%;
+  background-color: #fff;
+  overflow-y: auto;
+  padding: 10px;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les événements individuels */
+.event {
+  position: absolute;
+  border: 1px solid #000;
+  background-color: #17d5eac0;
+  color: #000;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 2px 5px;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
